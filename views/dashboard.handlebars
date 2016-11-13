@@ -1,0 +1,229 @@
+
+<div class="container-fluid">
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Withdraw From Account</h4>
+      </div>
+      <div class="modal-body">
+        <form method = "post" action = "/withdraw">
+        <div class="form-group">
+          <label for="formGroupExampleInput">Customer ID</label>
+          <input name = "ID" type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+        </div>
+      <div class="form-group">
+    <label for="exampleSelect1">From</label>
+    <select class="form-control" id="exampleSelect1">
+      <option name = "where">Pick an Account</option>
+      <option>Share Draft</option>
+      <option >Primary Account</option>
+    </select>
+</div>
+ <div class="form-group">
+    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+    <div class="input-group">
+      <div class="input-group-addon">$</div>
+      <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+      <div class="input-group-addon">.00</div>
+    </div>
+  </div>
+  <button id= "mine" type="submit" class="btn btn-primary">Withdraw</button>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="card">
+    <div class="card-header" role="tab" id="headingOne">
+      <h5 class="mb-0">
+        <a id = "acct" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Accounts
+        </a>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="card-block">
+           <a href= "#" id = "create">Create Account</a>
+           <br>
+           <a href= "#" id = "update" >view Accounts</a>
+           <br>
+           
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab" id="headingTwo">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+         New Transactions
+        </a>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <a href = "#" id = "loan" class = "collapseTwo">  Loans </a><br>
+       <a href = "#" id = "transer" class = "collapseTwo"> Tansfers </a><br>
+       <a href = "#" id = "depo"  class = "collapseTwo"> Deposit</a><br>
+       <a href = "#"id = "with" class = "collapseTwo" data-toggle="modal" data-target="#myModal"> Withdrawal</a><br>
+       <a href = "#" class = "collapseTwo"> Transaction logs</a><br>
+      <div class="card-block">
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab" id="headingThree">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Frequent Transfers
+        </a>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="card-block">
+        <a id = "own" > Own Accouts </a>
+        <a id = "book" > Book Transfers</a>
+        <a id = "own" > Wire Trasfer </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id = "pop" class = "pop container-fluid">
+      <form method = "post" action = "/default" >
+ 
+ <div id = "ID-wrap" class="form-group" >
+    <label for="ID">ID</label>
+    <input name = "ID" type="text" class="form-control" id="ID" aria-describedby="emailHelp" placeholder="First Name" >
+  </div> 
+  <div class="form-group" >
+    <label for="first">First Name</label>
+    <input name = "first" type="text" class="form-control" id="first" aria-describedby="emailHelp" placeholder="First Name" required>
+    
+  </div>
+  <div class="form-group">
+    <label for="Last">Last Name</label>
+    <input name = "Last" type="text" class="form-control" id="Last" placeholder="Last Name" required>
+  </div>
+  <div class="form-group">
+    <label for="stNum">Street Number </label>
+    <input name = "stNum" type="text" class="form-control" id="stNum" placeholder="Street Number" required>
+  </div>
+  <div class="form-group">
+    <label for="stName">Street Name</label>
+    <input name = "stName" type="text" class="form-control" id="stName" placeholder="Street Name" required>
+  </div>
+  <div class="form-group">
+    <label for="city">City </label>
+    <input name = "city" type="text" class="form-control" id="city" placeholder="City" required >
+  </div>
+  <div class="form-group">
+    <label for="State">State </label>
+    <input name = "State" type="text" class="form-control" id="State" placeholder="State" required>
+  </div>
+  <div class="form-group">
+    <label for="zip">Zip Code </label>
+    <input name = "Zip" type="text" class="form-control" id="zip" placeholder="Zip Code" required>
+  </div>
+  <button   id = "Cancel"  class="btn btn-danger">Cancel</button>
+  <button id = "Sub" type = "submit" class="btn btn-primary">Submit</button>
+</form>
+  </div>
+  
+   <div  id= "search-result">
+   <table class="table" >
+  <thead>
+    <tr>
+      
+      <th>Customer ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>ZIP</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data}}
+       <tr>
+           <td id = "id">{{this._id}}</td>
+           <td>{{this.first_name}}</td>
+           <td>{{this.last_name}}</td>
+           <td>{{this.address.zip}}</td>
+           <td><button id = "put" type="button" class="btn btn-warning btn-group-sm">edit</button>
+               <button  id = "remove" type="button" class="btn btn-danger btn-group-sm">delete</button>
+           </td> 
+    </tr>
+    
+    {{/each}}
+
+  </tbody>
+</table>
+</div>
+<div id = "mainScreen" class="container">
+  <table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>Date</th>
+      <th>ID</th>
+      <th>Description</th>
+      <th>Credit</th>
+      <th>Debit</th>
+      <th> Balance</th>
+    </tr>
+  </thead>
+  <tbody>
+   
+  </tbody>
+</table>
+
+  </div>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script>
+
+
+ $("#create").click(function(){
+     $("#search-result").hide();
+     $("#mainSccreen").hide();
+     $("#pop").show();
+    
+ });
+$("#update").click(function(){
+    $("#pop").hide();
+    $("#mainScreen").hide();
+    $("#search-result").show();
+});
+$("#acct").click(function(){
+  $("#pop").hide();
+  $("#search-result").hide();
+});
+  $("#put").click(function(){
+    var par = $(this).parent().parent(); 
+    var tdName = par.children("td:nth-child(1)");
+    var tdPhone = par.children("td:nth-child(2)"); 
+    var tdEmail = par.children("td:nth-child(3)");
+    var ID = tdName[0].innerHTML;
+     $("#search-result").hide();
+     $("#pop").show();
+      $("#search-result").hide();
+     $("#ID-wrap").show();
+     $("#ID").val(ID);
+    
+  });
+  $("#with").click(function(){
+    $("#popUp").show();
+  });
+</script>
+</div>

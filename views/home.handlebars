@@ -1,0 +1,66 @@
+<div class="container-fluid">
+  {{#if messages.success}}
+    <div role="alert" class="alert alert-success">
+      {{#each messages.success}}
+        <div>{{msg}}</div>
+      {{/each}}
+    </div>
+  {{/if}}
+  {{#if messages.error}}
+    <div role="alert" class="alert alert-danger">
+      {{#each messages.error}}
+        <div>{{msg}}</div>
+      {{/each}}
+    </div>
+  {{/if}}
+  {{#if messages.info}}
+    <div role="alert" class="alert alert-info">
+      {{#each messages.info}}
+        <div>{{msg}}</div>
+      {{/each}}
+    </div>
+ {{/if}}
+
+ 
+  
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel">
+        <div class="panel-body">
+          <h3>Purpose</h3>
+          <p>Provide high schools with the means to teach financial literacy through practice. 
+             Students will be able to simulate real transaction through the data generated and hosted through the 
+             Capital One API. Students tellers are able to make withdrawals, deposits, create accounts, delete accounts and find accounts.
+          </p>
+          <a href="#" role="button" class="btn btn-default">View details</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="panel">
+        <div class="panel-body">
+          <h3>Tutorial</h3>
+          <p>
+            Tutorials on how to use the  software and strategies to improve efficiency.
+            Allow students to keep up with workshops and competitions taking place  in their area .
+            Allow Capital One to monitor students' performance and time commitment.
+          </p>
+          <a href="#" role="button" class="btn btn-default">View details</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="panel">
+        <div class="panel-body">
+          <h3>Heading</h3>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+            condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+            Donec sed odio dui.</p>
+          <a href="#" role="button" class="btn btn-default">View details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
